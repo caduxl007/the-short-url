@@ -9,7 +9,7 @@ import {
 @Entity({
   name: 'urls',
 })
-export class Url extends BaseEntity {
+export class UrlEntity extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
