@@ -6,6 +6,8 @@ import { EncodeDto } from './dtos/encode-dto';
 import { UrlEntity } from './entities/url.entity';
 import { IUrlService } from './interfaces/url.interface';
 
+//TODO: Rename routes
+
 @Injectable()
 export class UrlsService implements IUrlService {
   constructor(
