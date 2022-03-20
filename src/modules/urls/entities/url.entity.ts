@@ -16,6 +16,9 @@ export class UrlEntity {
   code: string;
 
   @Column({ nullable: false })
+  short_url: string;
+
+  @Column({ nullable: false })
   origin_url: string;
 
   @CreateDateColumn()
@@ -24,6 +27,7 @@ export class UrlEntity {
   constructor(url?: Partial<UrlEntity>) {
     this.id = url?.id;
     this.origin_url = url?.origin_url;
+    this.short_url = url?.short_url;
     this.code = url?.code;
     this.created_at = url?.created_at;
   }
