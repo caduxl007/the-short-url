@@ -1,4 +1,4 @@
-<h1 align="center">Shot Url Api</h1>
+<h1 align="center">Short Url Api</h1>
 
 ### 🛠 Tecnologias
 
