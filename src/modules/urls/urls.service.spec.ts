@@ -7,11 +7,11 @@ import { UrlsService } from './urls.service';
 const urlsEntityList: UrlEntity[] = [
   new UrlEntity({
     origin_url: 'http://localhost:3003',
-    code: '41asd23',
+    short_url: '41asd23',
   }),
   new UrlEntity({
     origin_url: 'http://localhost:3000',
-    code: 'DS23FS',
+    short_url: 'DS23FS',
   }),
 ];
 

@@ -13,9 +13,6 @@ export class UrlEntity {
   id: string;
 
   @Column({ unique: true, nullable: false })
-  code: string;
-
-  @Column({ nullable: false })
   short_url: string;
 
   @Column({ nullable: false })
@@ -28,7 +25,6 @@ export class UrlEntity {
     this.id = url?.id;
     this.origin_url = url?.origin_url;
     this.short_url = url?.short_url;
-    this.code = url?.code;
     this.created_at = url?.created_at;
   }
 }
