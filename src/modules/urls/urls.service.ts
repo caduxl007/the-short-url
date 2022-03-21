@@ -50,18 +50,18 @@ export class UrlsService implements IUrlService {
   async decode(decodeDto: DecodeDto): Promise<{ origin_url: string }> {
     const { short_url } = decodeDto;
 
-    const findShotUrl = await this.urlRepository.findOne({
-      where: {
-        short_url,
-      },
-    });
+    try {
+      const findShotUrl = await this.urlRepository.findOneOrFail({
+        where: {
+          short_url,
+        },
+      });
 
-    if (!findShotUrl) {
+      return {
+        origin_url: findShotUrl.origin_url,
+      };
+    } catch (error) {
       throw new NotFoundException('URl não encontrada');
     }
-
-    return {
-      origin_url: findShotUrl.origin_url,
-    };
   }
 }
