@@ -5,8 +5,8 @@ import {
 } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { InjectRepository } from '@nestjs/typeorm';
-import { generateCodeUrl } from 'src/utils/generateCodeUrl';
 import { Repository } from 'typeorm';
+import { generateCodeUrl } from '../../utils/generateCodeUrl';
 import { DecodeDto } from './dtos/decode-dto';
 import { EncodeDto } from './dtos/encode-dto';
 import { UrlEntity } from './entities/url.entity';
